@@ -1,0 +1,29 @@
+function guiEmail (e) {
+// truyền vào biến e để lấy giá trị từ biểu mẫu
+var email = e.values[1]; //Lấy giá trị của cột số 2 lưu vào biến email
+var name = e.values[2]; //Lấy giá trị của cột số 1 lưu vào biến name
+var tel = e.values[3]; //Lấy giá trị của cột số 3 lưu vào biến tel
+var date = e.values[4]; // Lấy giá trị của cột số 4 lưu vào biến date
+var session = e.values[5]; // Lấy giá trị của cột số 5 lưu vào biến buổi
+var numberzalo = e.values[6]; // Lấy giá trị của cột số 5 lưu vào biến buổi
+var subject = 'XÁC NHẬN ĐĂNG KÝ THI THỬ TOEIC'; //Tiêu đề email
+var body = 'Thân gửi ' + name + '<br /><br />'; //Nội dung email
+body = body + '<p><span class="text">BTC xin gửi lời cảm ơn ch&acirc;n th&agrave;nh đến bạn v&igrave; đ&atilde; đăng k&yacute; tham gia THI THỬ TOEIC CHUẨN QUỐC TẾ do Mai L&acirc;m English tổ chức </span></p> <p><span class="text">Thời gian: <strong>27/06/2022</strong> v&agrave;o l&uacute;c <strong>18:00 - 20:00 </strong></span></p> <p><span class="text">Địa điểm: <strong>Ngoại ngữ Mai L&acirc;m - Lầu 4 Nh&agrave; văn ho&aacute; Sinh vi&ecirc;n - Khu đ&ocirc; thị Đại Học quốc gia TP.HCM </strong></span></p> <p><span class="text">👉Để ho&agrave;n thiện quy tr&igrave;nh đăng k&yacute; v&agrave; tham gia chương tr&igrave;nh, bạn vui l&ograve;ng tham gia nh&oacute;m Zalo tại đ&acirc;y: </span><a class="text-is-link" href="https://zalo.me/g/njhune790">https://zalo.me/g/njhune790</a></p> <div class="ddict_btn" style="top: 113px; left: 1326px;"><img src="chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png" /></div>';
+body = body + '<hr  width="30%" align="left" />';
+body = body + 'Thông tin thí sinh đăng ký<br /><br />';
+body = body + 'Họ và tên: ' + name + '<br /><br />';
+body = body + 'Số điện thoại: ' + tel + '<br /><br />';
+body = body + 'Email: ' + email + '<br /><br />';
+body = body + 'Chúc bạn có một kỳ thi đạt kết quả tốt và có một trải nghiệm đáng nhớ ❤️<br />';
+body = body + '<div id="19t2j_c57kj"> <div id="4o6lv_1ag8q"><span id="4o6lv_1ag8q_d3guu" class="" data-text="true">Trong trường hợp cần hỗ trợ. Bạn vui l&ograve;ng li&ecirc;n hệ thư k&yacute; qua Hotline&amp;Zalo: </span><strong><span id="4o6lv_1ag8q_a65v8" class="" style="color: #e03e2d;" data-text="true">0768 117 227</span></strong></div> </div>';
+body = body + '<hr  width="30%" align="left" />';
+body = body + 'Kết nối với Mai Lâm English:<br />';
+body = body + '<div id="19t2j_c57kj"> <div> <div>Facebook: <a title="Mai L&acirc;m English" href="facebook.com/anhngumailam/" target="_blank" rel="noopener">Mai L&acirc;m English</a></div> </div> </div>';
+body = body + '<div id="19t2j_c57kj"> <div> <div>Youtube: <a title="Ngoại Ngữ Mai L&acirc;m" href="https://www.youtube.com/channel/UCwc3mFo0GvOpgW_-V-1QvyA?sub_confirmation=1" target="_blank" rel="noopener">Ngoại Ngữ Mai L&acirc;m</a></div> </div> </div>';
+body = body + 'Website: mailam.edu.vn <br />';
+MailApp.sendEmail({
+to: email,
+subject: subject,
+htmlBody: body
+});
+}
